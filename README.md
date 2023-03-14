@@ -1,2 +1,2 @@
 # Projetos.py
- Repositório de programas simples (python).
+ Repositório direcionado a estudo (Pytohn).
