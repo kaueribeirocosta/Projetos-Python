@@ -39,6 +39,8 @@ match escolha_operacao:
     case ('x'):
         resultado = numero_1 * numero_2 
 
+# Mostra o resultado da conta.
+
 print (f'Resultado:\n{numero_1} {escolha_operacao} {numero_2} = {resultado}')
 
         
