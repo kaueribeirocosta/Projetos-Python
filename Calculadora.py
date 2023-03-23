@@ -2,16 +2,30 @@ print ('x' * 12)
 print ('Calculadora')
 print ('x' * 12)
 
+from time import sleep
+
 # Entrada de numeros int ou float.
 
-numero_1 = int and float(input('Informe o primeiro número: ').strip().replace(',' , '.'))
-numero_2 = int and float(input('Informe o segundo número: ').strip().replace(',' , '.'))
+numero_1 = float(input('Informe o primeiro número: ').strip().replace(',' , '.'))
+numero_2 = float(input('Informe o segundo número: ').strip().replace(',' , '.'))
 
-# Escolha da operação Matematica.
+# Lista com as opções válidas.
 
-escolha_operacao = input ('''Escolha uma das opações abaixo:\n
-( + ) = Soma \n( - ) = Subtração \n( / ) = divisão \n( x ) = Multiplicação \n
+opcoes_validas = ['+', '-', '/', 'x']
+escolha_operacao = ''
+
+# Escolha da operação Matematica com loop de verificação.
+
+while escolha_operacao not in  opcoes_validas:
+    escolha_operacao = input ('''Escolha uma das opações abaixo:\n
+( + ) = Soma
+( - ) = Subtração
+( / ) = divisão
+( x ) = Multiplicação\n
 Sua escolha? : ''').strip()
+    if escolha_operacao not in opcoes_validas:
+        print('Escolha inválida! Tente novamente...')
+        sleep (1.0)
 
 # Realizaçao do calculo com math case.
 
@@ -27,11 +41,4 @@ match escolha_operacao:
 
 print (f'Resultado:\n{numero_1} {escolha_operacao} {numero_2} = {resultado}')
 
-
-# while True:
-#     quantidade_num = int(input('Quantos números serão calculados? : ').strip())
-    
-# # O for vai se repetir quantas o usuario quiser.
-#     for numero in range(quantidade_num):
-#         numero = input(f'Informe o {numero + 1}° número: ').strip().replace(',', '.')
         
