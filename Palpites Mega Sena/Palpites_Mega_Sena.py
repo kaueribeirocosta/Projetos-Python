@@ -1,11 +1,11 @@
 print('==' * 10)
-print('Gerador da Mega Sena')
+print('Palpites da Mega Sena')
 print('==' * 10)
 
-# 1 passo - Importar a função choices da blib random.
+# 1 passo - Importar a função sample da blib random.
 from random import sample
 
-# 2 passo -  Perguntar quantos jogos serão sorteados.
+# 2 passo -  Entra com quantos jogos serão sorteados.
 qnt_jogos = int(input('Quantos Jogos serão?: ').strip())
 
 # 3 passo - sortear os jogos .
